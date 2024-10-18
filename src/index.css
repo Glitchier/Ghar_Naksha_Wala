@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* dark : #23262D */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+nav a.active {
+  background-color: #86b9b0;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1000px;
+}
+
+footer a.active {
+  border-bottom: 2px solid #86b9b0;
+  transition: 0.2s ease-in-out;
+}
+
+*::selection {
+  background-color: #86b9b0;
+  color: white;
+}
+
+* {
+  outline-color: #86b9b0;
+}
