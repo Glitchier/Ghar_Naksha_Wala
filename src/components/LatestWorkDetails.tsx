@@ -1,16 +1,26 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { LatestWorkData } from "../assets/imports";
 import { motion } from "framer-motion";
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 
 const ImageSlider = lazy(() => import("./ImageSlider"));
 
 const LatestWorkDetails = () => {
   const { id } = useParams();
-  if (!id) return null;
-  const data = LatestWorkData[id];
+  const data = id ? LatestWorkData[id] : undefined;
 
-  if (!data) return null;
+  if (!data)
+    return (
+      <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4">
+        <p className="text-zinc-500">That project doesn't exist.</p>
+        <Link
+          to="/"
+          className="rounded bg-primary px-6 py-2 font-semibold text-white"
+        >
+          Back to home
+        </Link>
+      </div>
+    );
   return (
     <div className="flex w-full flex-col justify-center my-14 items-start gap-8">
       <motion.div
@@ -20,7 +30,7 @@ const LatestWorkDetails = () => {
         viewport={{ once: true }}
         className="flex justify-center items-start gap-4 mb-6"
       >
-        <div className="h-1 bg-dark w-10 rounded-full mt-4"></div>
+        <div className="h-1 bg-primary w-10 rounded-full mt-4"></div>
         <h1 className="text-2xl font-Kaushan text-zinc-400">Project Details</h1>
       </motion.div>
       <div className="flex flex-col justify-center items-start w-full gap-4">
@@ -34,7 +44,13 @@ const LatestWorkDetails = () => {
         </div>
       </div>
 
-      <ImageSlider data={data.pic} />
+      <Suspense
+        fallback={
+          <div className="aspect-video w-full max-w-[1080px] animate-pulse rounded-xl bg-zinc-200" />
+        }
+      >
+        <ImageSlider data={data.pic} />
+      </Suspense>
     </div>
   );
 };

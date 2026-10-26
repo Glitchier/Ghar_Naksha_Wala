@@ -12,7 +12,7 @@ const About = () => {
         viewport={{ once: true }}
         className="flex justify-center items-center gap-4 w-full"
       >
-        <div className="h-1 w-10 bg-dark rounded-full"></div>
+        <div className="h-1 w-10 bg-primary rounded-full"></div>
         <h1 className="text-3xl text-zinc-500 font-Kaushan">About Us</h1>
       </motion.div>
       <motion.div
@@ -43,7 +43,7 @@ const About = () => {
             className="text-3xl tracking-wide font-Kaushan"
           >
             Who we are
-            <div className="h-1 w-10 bg-dark rounded-full mt-2"></div>
+            <div className="h-1 w-10 bg-primary rounded-full mt-2"></div>
           </motion.h1>
 
           <motion.p
@@ -54,10 +54,10 @@ const About = () => {
             className="text-sm lg:text-md"
           >
             Ghar Naksha Wala is an architecture and design based company founded
-            in Jharkhand, India in 2020. Our investigations occur at multiple
+            in India in 2020. Our investigations occur at multiple
             scales; from objects and interiors to residential and commercial
             buildings. Current work includes private residences, residential
-            interiors, hospitality and institutional projects across Jharkhand.
+            interiors, hospitality and institutional projects across the region.
             <br />
             <br />
             As a Design company, our work is process driven — combining spatial
@@ -76,7 +76,7 @@ const About = () => {
         viewport={{ once: true }}
         className="flex justify-center items-center gap-4 w-full my-6"
       >
-        <div className="h-1 w-10 bg-dark rounded-full"></div>
+        <div className="h-1 w-10 bg-primary rounded-full"></div>
         <h1 className="text-3xl font-Kaushan">Meet our team</h1>
       </motion.div>
 
@@ -88,7 +88,7 @@ const About = () => {
             transition={{ duration: 0.5, type: "tween", staggerChildren: 0.4 }}
             viewport={{ once: true }}
             key={idx}
-            className="flex flex-col justify-center items-center gap-6 p-4 bg-dark/10 backdrop-blur-sm rounded-lg m-6"
+            className="flex flex-col justify-center items-center gap-6 p-4 bg-primary/10 backdrop-blur-sm rounded-lg m-6"
           >
             <img
               src={item.pic}

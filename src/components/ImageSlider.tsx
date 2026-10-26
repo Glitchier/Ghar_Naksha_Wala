@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import SmartImage from "./SmartImage";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 type ImageSliderType = {
@@ -8,25 +9,19 @@ type ImageSliderType = {
 const ImageSlider = ({ data }: ImageSliderType) => {
   const [imgNumber, setImgNumber] = useState<number>(0);
 
-  useEffect(() => {
-    if (data.length === imgNumber) {
-      setImgNumber(0);
-    }
-  }, [imgNumber, data]);
-
   return (
     <div className="flex max-w-[1080px] justify-center items-center gap-4 w-full">
       <picture className="relative rounded-xl overflow-hidden bg-cover bg-center justify-center items-center flex">
-        <img
+        <SmartImage
           src={data[imgNumber]}
-          loading="lazy"
-          alt="img"
-          className="max-w-[1080px] min-w-[360px] aspect-auto"
+          alt={`Project photo ${imgNumber + 1} of ${data.length}`}
+          className="max-w-full sm:max-w-[1080px] aspect-auto"
         />
         <div className="absolute left-0 top-0 w-full h-full">
           {/* left */}
           {imgNumber === 0 ? null : (
-            <div
+            <button
+              aria-label="Previous photo"
               onClick={() => {
                 if (imgNumber !== 0) {
                   setImgNumber(imgNumber - 1);
@@ -37,16 +32,17 @@ const ImageSlider = ({ data }: ImageSliderType) => {
               className="absolute left-[0%] top-1/2 -translate-y-1/2 flex justify-center items-center h-full hover:bg-black/50 hover:backdrop-blur-sm p-2 cursor-pointer"
             >
               <IoIosArrowBack size={"2.5rem"} fill="#fff" />
-            </div>
+            </button>
           )}
           {/* right */}
           {imgNumber === data.length - 1 ? null : (
-            <div
+            <button
+              aria-label="Previous photo"
               onClick={() => setImgNumber(imgNumber + 1)}
               className="absolute right-[0%] top-1/2 -translate-y-1/2 flex justify-center items-center h-full cursor-pointer hover:bg-black/50 hover:backdrop-blur-sm p-2"
             >
               <IoIosArrowForward size={"2.5rem"} fill="#fff" />
-            </div>
+            </button>
           )}
         </div>
       </picture>

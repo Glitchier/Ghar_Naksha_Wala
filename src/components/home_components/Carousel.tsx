@@ -5,16 +5,15 @@ const Carousel = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      setCurrent(current + 1);
-      if (current === CarouselPhotos.length - 1) {
-        setCurrent(0);
-      }
-    }, 5000);
-  });
+    const t = setTimeout(
+      () => setCurrent((c) => (c + 1) % CarouselPhotos.length),
+      5000,
+    );
+    return () => clearTimeout(t);
+  }, [current]);
 
   return (
-    <div className="flex flex-col gap-4 h-full max-w-[1080px] mx-auto aspect-[16/9] overflow-hidden drop-shadow-lg rounded-md">
+    <div className="relative flex flex-col gap-4 h-full max-w-[1080px] mx-auto aspect-[16/9] overflow-hidden drop-shadow-lg rounded-md">
       <div className="relative w-full h-full flex flex-col justify-center items-center gap-4">
         {CarouselPhotos.map((item, idx) => {
           return (
@@ -30,7 +29,7 @@ const Carousel = () => {
                 <img
                   src={item.url}
                   className="object-cover bg-center aspect-[16/9]"
-                  loading="lazy"
+                  loading={idx === 0 ? "eager" : "lazy"}
                   alt={`img${idx}`}
                 />
                 <div className="absolute top-0 left-0 z-[10] w-full h-full flex flex-col justify-center items-center gap-2 sm:gap-4 bg-gradient-to-t from-black/90 to-transparent">
@@ -56,7 +55,7 @@ const Carousel = () => {
               key={idx}
               className={
                 idx === current
-                  ? "bg-dark rounded-full w-2 h-2 z-[10]"
+                  ? "bg-primary rounded-full w-2 h-2 z-[10]"
                   : "bg-zinc-400 rounded-full w-1 h-1 z-[10]"
               }
             ></div>

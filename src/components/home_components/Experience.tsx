@@ -15,7 +15,7 @@ const Experience = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, type: "tween" }}
           viewport={{ once: true }}
-          className="text-4xl text-dark font-semibold"
+          className="text-4xl text-primary font-semibold"
         >
           500+
         </motion.h1>
@@ -37,7 +37,7 @@ const Experience = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, type: "tween" }}
           viewport={{ once: true }}
-          className="text-4xl text-dark font-semibold"
+          className="text-4xl text-primary font-semibold"
         >
           100+
         </motion.h1>
@@ -59,7 +59,7 @@ const Experience = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4, type: "tween" }}
           viewport={{ once: true }}
-          className="text-4xl text-dark font-semibold"
+          className="text-4xl text-primary font-semibold"
         >
           3+
         </motion.h1>
@@ -81,7 +81,7 @@ const Experience = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4, type: "tween" }}
           viewport={{ once: true }}
-          className="text-4xl text-dark font-semibold"
+          className="text-4xl text-primary font-semibold"
         >
           5+
         </motion.h1>

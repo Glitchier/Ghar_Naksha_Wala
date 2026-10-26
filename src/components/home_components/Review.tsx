@@ -12,7 +12,7 @@ const Review = () => {
         viewport={{ once: true }}
         className="flex justify-center items-start gap-4 mb-6"
       >
-        <div className="h-1 bg-dark w-10 rounded-full mt-4"></div>
+        <div className="h-1 bg-primary w-10 rounded-full mt-4"></div>
         <div className="flex-col flex gap-6">
           <h1 className="text-2xl font-Kaushan text-zinc-400">Feedbacks</h1>
           <h1 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl capitalize">
@@ -46,9 +46,10 @@ const Review = () => {
         </div>
       </motion.div>
       <a
-        href="https://www.justdial.com/Ranchi/Ghar-Naksha-Wala-Dhurwa/0651PX651-X651-240803194915-E1F3_BZDET?via=scode"
-        target="blank"
-        className="p-2 transition-all duration-200 ease-in-out border-dark border-2 rounded bg-white drop-shadow-sm hover:bg-dark hover:text-white"
+        href="https://www.example.com/reviews"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 transition-all duration-200 ease-in-out border-primary border-2 rounded bg-white drop-shadow-sm hover:bg-primary hover:text-white"
       >
         More Reviews
       </a>

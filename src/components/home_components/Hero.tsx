@@ -19,7 +19,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="flex flex-col mx-auto items-start gap-2 justify-start"
         >
-          <div className="h-1 bg-dark w-10 rounded-full"></div>
+          <div className="h-1 bg-primary w-10 rounded-full"></div>
           <p className="capitalize text-3xl xl:text-4xl xl:leading-relaxed xl:tracking-wider font-Kaushan leading-relaxed tracking-wider font-semibold">
             Design your
             <br />
@@ -33,7 +33,7 @@ const Hero = () => {
           </p>
           <button
             onClick={routeChange}
-            className="bg-dark text-white text-xs font-semibold tracking-wider px-4 py-3 rounded-full hover:bg-zinc-800 hover:text-white hover:scale-105 transition-all duration-200 text-nowrap mt-6"
+            className="bg-primary text-white text-xs font-semibold tracking-wider px-4 py-3 rounded-full hover:bg-zinc-800 hover:text-white hover:scale-105 transition-all duration-200 text-nowrap mt-6"
           >
             OUR PROJECTS
           </button>

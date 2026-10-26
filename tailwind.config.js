@@ -12,7 +12,7 @@ export default {
         lg2: "1100px",
       },
       colors: {
-        dark: "#86B9B0",
+        primary: { DEFAULT: "#0D9488", dark: "#0F766E", light: "#E6F6F4" },
       },
       fontFamily: {
         Montserrat: ["Montserrat", "sans-serif"],

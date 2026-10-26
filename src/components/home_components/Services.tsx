@@ -14,7 +14,7 @@ const Services = () => {
         viewport={{ once: true }}
         className="flex justify-center items-start gap-4 mb-6"
       >
-        <div className="h-1 bg-dark w-10 rounded-full mt-4"></div>
+        <div className="h-1 bg-primary w-10 rounded-full mt-4"></div>
         <div className="flex-col flex gap-6">
           <h1 className="text-2xl font-Kaushan text-zinc-400">What we do</h1>
           <h1 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl capitalize">

@@ -42,9 +42,10 @@ const Footer = () => {
             </p>
             <a
               aria-label="G-Mail"
-              href="mailto:gharnakshawala@gmail.com"
-              target="blank"
-              className="uppercase px-3 py-2 border-2 transition-all duration-200 border-dark bg-white rounded text-sm hover:bg-dark hover:text-white"
+              href="mailto:hello@example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="uppercase px-3 py-2 border-2 transition-all duration-200 border-primary bg-white rounded text-sm hover:bg-primary hover:text-white"
             >
               CONTACT US
             </a>
@@ -80,8 +81,9 @@ const Footer = () => {
           <div className="rounded-full flex justify-center items-center gap-4">
             <a
               aria-label="Facebook"
-              href="https://www.facebook.com/share/4DdzrVhSuNkyWcXN/?mibextid=qi2Omg"
-              target="blank"
+              href="https://www.facebook.com/example"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer hover:scale-110 transition-all ease-in-out duration-200"
             >
               <FaFacebookSquare size={"1.6rem"} fill="#1877F2" />
@@ -89,8 +91,9 @@ const Footer = () => {
 
             <a
               aria-label="WhatsApp"
-              href="https://wa.me/+919798419132"
-              target="blank"
+              href="https://wa.me/919876543211"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer hover:scale-110 transition-all ease-in-out duration-200"
             >
               <FaSquareWhatsapp size={"1.6rem"} fill="#25D366" />
@@ -99,7 +102,8 @@ const Footer = () => {
             <a
               aria-label="Instagram"
               href="#"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer hover:scale-110 transition-all ease-in-out duration-200"
             >
               <FaInstagramSquare size={"1.6rem"} fill="#E1306C" />
@@ -108,7 +112,8 @@ const Footer = () => {
             <a
               aria-label="LinkedIn"
               href="#"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer hover:scale-110 transition-all ease-in-out duration-200"
             >
               <FaLinkedin size={"1.6rem"} fill="#0077B5" />
@@ -124,32 +129,36 @@ const Footer = () => {
         <div className="flex justify-center items-center gap-4">
           <a
             aria-label="G-Mail"
-            href="mailto:gharnakshawala@gmail.com"
-            target="blank"
+            href="mailto:hello@example.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm cursor-pointer hover:underline text-zinc-500"
           >
             Email
           </a>
           <a
-            aria-label="JustDial"
+            aria-label="Reviews"
             href="https://jsdl.in/DT-515R1DGL4VK"
-            target="blank"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm cursor-pointer hover:underline text-zinc-500"
           >
-            JustDial
+            Reviews
           </a>
           <a
             aria-label="WhatsApp"
-            href="https://wa.me/+917008344192"
-            target="blank"
+            href="https://wa.me/919876543212"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm cursor-pointer hover:underline text-zinc-500"
           >
             WhatsApp
           </a>
           <a
             aria-label="Facebook"
-            href="https://www.facebook.com/share/4DdzrVhSuNkyWcXN/?mibextid=qi2Omg"
-            target="blank"
+            href="https://www.facebook.com/example"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm cursor-pointer hover:underline text-zinc-500"
           >
             Facebook

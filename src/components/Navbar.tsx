@@ -64,9 +64,10 @@ const Navbar = () => {
         </NavLink>
         <a
           aria-label="Phone"
-          className="text-sm font-semibold flex justify-center items-center px-4 py-2 border-dark border-2 cursor-pointer hover:bg-dark hover:text-white rounded-md"
-          href="tel:+918734958539"
-          target="blank"
+          className="text-sm font-semibold flex justify-center items-center px-4 py-2 border-primary border-2 cursor-pointer hover:bg-primary hover:text-white rounded-md"
+          href="tel:+919876543210"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Call Us
         </a>
@@ -77,9 +78,10 @@ const Navbar = () => {
       >
         <a
           aria-label="Phone"
-          className="text-xs font-semibold flex justify-center items-center px-4 py-2 border-dark border-2 cursor-pointer hover:bg-dark hover:text-white rounded-md"
-          href="tel:+918734958539"
-          target="blank"
+          className="text-xs font-semibold flex justify-center items-center px-4 py-2 border-primary border-2 cursor-pointer hover:bg-primary hover:text-white rounded-md"
+          href="tel:+919876543210"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Call Us
         </a>
